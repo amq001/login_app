@@ -25,6 +25,7 @@ function LoginPage() {
 
     //   if (response.ok) {
     //     setRedirectToHomePage(true);
+    //     localStorage.setItem(JSON.stringify(response))
     //   }
     //   else{
     //     setErrorMessage("Login Failed")
