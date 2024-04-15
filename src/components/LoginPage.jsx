@@ -24,11 +24,11 @@ function LoginPage() {
     //   });
 
     //   if (response.ok) {
-    //     setRedirectToHomePage(true);
     //     localStorage.setItem(JSON.stringify(response))
+    //     navigate("/home");
     //   }
     //   else{
-    //     setErrorMessage("Login Failed")
+    //     setErrorMessage("Login Failed Wrong Email or Password")
     //   }
 
     // } catch (error) {
@@ -46,22 +46,25 @@ function LoginPage() {
 
   return (
     <>
+    <div className="parent">
       <div className='first'>
-        <h1>Login</h1>
         <form onSubmit={handleSubmit}>
+        <h1>Login</h1>
           <div>
             <label htmlFor="email">Email: </label>
             <input
             type="text"
+            className='form-control'
             id='email'
             value={username}
             onChange={(e)=>setUsername(e.target.value)}
             />
           </div>
           <div>
-            <label htmlFor="password">Password: </label>
+            <label className='label' htmlFor="password">Password: </label>
             <input
             type="password"
+            className='form-control'
             id='password'
             value={password}
             onChange={(e)=>setPassword(e.target.value)}
@@ -70,6 +73,7 @@ function LoginPage() {
           <button type='submit'>Login</button>
         </form>
         {errorMessage && <p>errorMessage</p> }
+      </div>
       </div>
       
     </>

@@ -42,6 +42,7 @@ function Second() {
         <div className="right-section">
 
         {data.map((card,i)=>(
+          // eslint-disable-next-line react/jsx-key
           <div className="cards">
             <img src={card.image} alt="home" />
             <h1>{card.price}</h1>
